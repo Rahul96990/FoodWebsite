@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>FastFood TNC / Login</title>
+
+     <!-- Index CSS Link -->
+     <link rel="stylesheet" href="../index.css">
+
+     <!-- Login CSS Link -->
+     <link rel="stylesheet" href="./Login.css">
+
+     <!-- Website Logo Image Link -->
+     <link rel="shortcut icon" href="../Assest/menu-2.png" type="image/x-icon">
+
+     <!-- Font Icon CSS Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- Swiper Css Link -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+     
+     <!-- Animation AOS CSS Link -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"   />
+     
+</head>
+
+<body>
+
+     <!-- Main Container Start -->
+
+     <main>
+          <nav class="nav">
+               <div class="left">
+                    <a href="../Index.html"><img src="../Assest/logo.png" alt="logo"></a>
+               </div>
+               <div class="center">
+                    <ul>
+                         <i class="fa-solid fa-xmark nav-cross"></i>
+                         <a href="../Index.html">
+                              <li>Home</li>
+                         </a>
+                         <a href="../About Page/About.html">
+                              <li>About Us</li>
+                         </a>
+                         <a href="../Shop Page/Shop.html">
+                              <li>Shop</li>
+                         </a>
+                         <a href="../Blog Page/Blog.html">
+                              <li>Blog</li>
+                         </a>
+                         <a href="../Contact Us Page/Contact.html">
+                              <li>Contact Us</li>
+                         </a>
+                         <a href="../Login/Login.html">
+                              <li style="color:#ffb700;">Login </li>
+                         </a>
+                    </ul>
+               </div>
+               <div class="right">
+                    <div class="icons">
+                         <span class="cart">
+                              <i class="fa-solid  fa-shopping-cart"></i>
+                         </span>
+                         <span class="cart">
+                              <i class="fa-solid fa-bars"></i>
+                         </span>
+                    </div>
+               </div>
+          </nav>
+     </main>
+
+     <!-- Main Container End -->
+
+     <!-- Add To Cart Container Start -->
+
+     <div class="add-to-cart-container">
+          <div class="header">
+               <h3>Your Card</h3>
+               <i class="fa-solid fa-xmark cart-cross"></i>
+          </div>
+          <div class="add-to-card-item">
+               <div class="item">
+                    <img src="../Assest/menu-6.png" alt="">
+                    <div class="detail">
+                         <p>Tasty Beef Burger</p>
+                         <p>$41.00 USD</p>
+                    </div>
+                    <input type="number" name="" value="3" id="">
+               </div>
+               <div class="item">
+                    <img src="../Assest/menu-2.png" alt="">
+                    <div class="detail">
+                         <p>Spinach Artichoke Spectacle</p>
+                         <p>$20.00 USD</p>
+                    </div>
+                    <input type="number" name="" value="3" id="">
+               </div>
+               <div class="item">
+                    <img src="../Assest/menu-3.png" alt="">
+                    <div class="detail">
+                         <p>TNC Combo Meals</p>
+                         <p>$70.00 USD</p>
+                    </div>
+                    <input type="number" name="" value="3" id="">
+               </div>
+          </div>
+          <div class="bottom">
+               <div class="total">
+                    <p>Subtotal</p>
+                    <p>$ 110.00 USD</p>
+               </div>
+               <a href="../Index.html"><button onclick="alert('Visit Again')">Add to Ckeckout</button></a>
+          </div>
+     </div>
+
+     <!-- Add To Cart Container End -->
+
+     <!-- Login Form Container Start -->
+
+     <form action="../Index.html" id="login-form" method="get">
+          <h1>Login</h1>
+          <hr>
+          <div class="email">
+               <p>Enter Email</p>
+               <input type="email" name="" placeholder="Email" id="email" required>
+          </div>
+          <div class="email">
+               <p>Enter Password</p>
+               <input type="password" name="" placeholder="Password" id="password" required>
+          </div>
+          <div class="submit">
+               <input type="submit" name="" value="Login" >
+          </div>
+          <div class="login-footer">
+               <p>Create an account? <a href="../SignUp/signup.html">Click here</a> </p>
+               <p id="message"></p>
+          </div>
+     </form>
+
+     <!-- Login Form Container End -->
+
+     <!-- Swiper JS Link -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+     <!-- Animation AOS JS Link -->
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+     <script src="./Login.js"></script>
+
+     <script>
+
+          document.addEventListener('DOMContentLoaded', function () {
+               let cart_xmark_icon = document.querySelector(".cart-cross")
+               let add_to_cart = document.querySelector(".add-to-cart-container")
+               let shopping_cart_icon = document.querySelector(".fa-shopping-cart")
+
+               shopping_cart_icon.addEventListener('click', () => {
+                    add_to_cart.classList.add("active")
+               })
+
+               cart_xmark_icon.addEventListener('click', () => {
+                    add_to_cart.classList.remove("active")
+               })
+
+               let nav_xmark_icon = document.querySelector(".nav-cross")
+               let nav_container = document.querySelector("main .nav .center ul")
+               let bar_icon = document.querySelector(".fa-bars")
+
+               bar_icon.addEventListener('click', () => {
+                    nav_container.classList.add("active")
+               })
+
+               nav_xmark_icon.addEventListener('click', () => {
+                    nav_container.classList.remove("active")
+               })
+          });
+
+
+     </script>
+
+</body>
+
+</html>

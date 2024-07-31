@@ -1,0 +1,57 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     list-style: none;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+i{
+     cursor: pointer;
+}
+
+a{
+     text-decoration: none;
+     color: inherit;
+}
+
+a li.active{
+     color: #ffb700;
+}
+
+
+main{
+     height: 400px;
+     background-position: center;
+     background-size: cover;
+}
+
+
+main .hero{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     height: 400px;
+     padding-top: 70px;
+}
+
+main .hero h1{
+     font-size: 36px;
+     margin: 0px 0px 10px;
+     text-align: center;
+     color: #ffff;
+     font-family: sans-serif;
+}
+
+main .hero p{
+     font-size: 18px;
+     color: #b0b5b9;
+     font-family: sans-serif;
+}
+
+main .hero p i{
+     font-size: 20px;
+     margin: 0 5px;
+}
+
