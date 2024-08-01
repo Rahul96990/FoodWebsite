@@ -849,6 +849,18 @@ textarea {
           grid-template-columns: 1fr 1fr 1fr;
           column-gap: 10px;
      }
+     .fast-food-feature .fast-description .detail h3 {
+          font-size: 15px;
+          font-family: sans-serif;
+          color: #010f1c;
+     }
+     .fast-food-feature .fast-description .detail p {
+          font-size: 14px;
+          font-family: sans-serif;
+          color: #8a9197;
+          line-height: 25px;
+          margin-top: 10px;
+     }
      .fast-food-tnc-container {
           margin: 50px 20px;
      }
